@@ -1,14 +1,14 @@
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-public class ArrayIndexOutOfBoundsExceptionTest {
+import static org.junit.Assert.assertThrows;
 
+public class ArrayIndexOutOfBoundsExceptiontest {
     @Test
-    public void testThrowArrayIndexOutOfBoundsException() {
-        ArrayIndexOutOfBoundsExceptionClass exceptionClass = new ArrayIndexOutOfBoundsExceptionClass();
-
+    public void testArrayIndexOutOfBoundsException() {
+        int[] arr = { 1, 2, 3, 4, 5 };
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
-            exceptionClass.throwArrayIndexOutOfBoundsException();
+            main.getElementAtIndex(arr, 9);
         });
     }
 }
+

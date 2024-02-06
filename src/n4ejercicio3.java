@@ -1,12 +1,13 @@
-public class Main {
+import java.lang.*;
 
-    public static void main(String[] args) {
+public class main {
 
+    public static int getElementAtIndex(int[] arr, int index) throws ArrayIndexOutOfBoundsException {
 
-        ArrayIndexOutOfBoundsExceptionClass exceptionClass = new ArrayIndexOutOfBoundsExceptionClass();
-        exceptionClass.throwArrayIndexOutOfBoundsException();
-
+        if (index < 0 || index >= arr.length) {
+            throw new ArrayIndexOutOfBoundsException("Índice fuera de los límites del array");
+        }
+        return arr[index];
     }
-
 }
 
